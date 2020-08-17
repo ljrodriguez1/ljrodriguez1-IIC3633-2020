@@ -1,0 +1,13 @@
+# Critica: FunkSVD
+
+En primer lugar hay que aclarar que este no es un paper cientifico sino que un blog donde se comenta la participacion de Simon Funk en el concurso de sistemas recomendadores de netflix.
+
+El blog trata principalmente de distintas mejoras sobre un algoritmo ya existente para tratar de ganar un concurso. Para esto el aproach que se toma es la compresion de los datos, ya que esto significa encontrar las generalidades de estos y con estas generalidades (si se hizo una buena compresion) podremos describir todos los ratings en particular predecir los que no conocemos. para esto se ocupa Singular Value descomposition que es una tecnica que permite tomar una matriz gigantesca y subdividirla en matrices mas pequeñas las cuales de mejor manera representan a la matriz general.
+
+Antes de seguir con el resumen me gustaria señalar que creo que aqui el autor podria haber hecho una mejor explicacion de como funciona SVD y de que manera decompone la matriz ya que no me quedo claro, como se define el numero de atributos importantes por usuario, son estos definidos a priori o al hacer el SVD las matrices resultantes me lo señalaran. creo que se cae un poco asumiendo mayor conocimiento sobre el tema. y se dedica a explicar en terminos sencillos lo que esto significa, que creo se entiende bien, pero en ninguna parte señala como se logra en la practica esta descomposicion.
+
+Luego continua explicando el algoritmo de entrenamiento donde toca temas como el learning rate, que nos dice que tanto debemos avanzar con cada entrenamiento. tambien como solucionar problemas con los usuarios y peliculas que poseen pocos ratings, sumandoles el promedio de ratings ponderado por un k.
+
+Creo que el autor hace una muy buena explicacion de como es el proceso que el sigue para llegar al algoritmo. es asi que lo hace tan bien que llega a ser caotico, de igual manera que cuando uno esta experimentando con cosas nuevas. por lo que no hay una estructura clara de las cosas si no mas bien las va diciendo en el orden en que las fue provando. Esto hizo que me costara mas poder seguir el blog.
+
+Luego de procesar un poco mas el blog creo entender que la descomposicion no se hace de una manera matematica mediante una formula, si no que se va entrenando siguiendo el gradiente para encontrar estos valores y llenar la matriz. como pueden ver no me quedo muy claro y me gustaria que en el feedback que me den sobre este comentario me lo puedan refutar o aclarar :D. pero a pesar de esto me quedo con la sensacion de que el autor pudo haber explicado un poco mas esto, el como llegar a esta matriz ya que creo que es la gracia del algoritmo.
