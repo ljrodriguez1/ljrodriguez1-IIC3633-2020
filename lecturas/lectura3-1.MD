@@ -1,0 +1,7 @@
+# Critica: Performance of Recommender Algorithms on top-N Recommendation Task.
+
+En el paper se trata el tema de medir la efectividad de los algoritmos de recomendación. En especifico cuando se busca entregar una lista de N recomendaciones donde métricas de error comunes como RMSE. Esta idea nace ya que muchos clientes buscan mostrar N ítems a potenciales consumidores sin importarles el rating que este les hubiese dado.
+
+Es importante elegir un buen set de testeo ya que al incluir los ítems mas populares se hace más fácil realizar el ranking top-N permitiendo comparar sistemas recomendadores no personalizados con algoritmos del estado del arte. Al eliminar estos ítems populares se hace más difícil la tarea eliminando el bias exactitud.
+
+Se hablan sobre diversos métodos para recomendar, entre ellos, no personalizados, de factores latentes y de vecindario. Primero habla sobre una pequeña modificación sobre los métodos de vecindarios, al recomendar no normaliza los rankings para que se encuentren entre 1 o 5, en el paper lo señalan como una posible ventaja ya que obtendrán mejor ranking los ítems con más ítems similares y por lo tanto habrá mas confianza, pero se es poco riguroso, ya que se puede argumentar que esto tiene problemas de cold-start para ítems nuevos, y que en promedio ítems antiguos o populares tendrán mas ratings y por lo tanto serán injustamente más recomendados. Lo mismo ocurre en PureSVD donde deja como 0 todos los valores inexistentes lo que puede llevar a los mismos problemas comentados anteriormente.
